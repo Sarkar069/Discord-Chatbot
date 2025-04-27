@@ -1,0 +1,6 @@
+disnake
+python-dotenv
+groq 
+discord-handler
+aiohttp 
+
