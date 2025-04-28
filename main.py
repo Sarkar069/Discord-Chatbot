@@ -4,7 +4,6 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 from botlog import setup_logging
-import asyncio
 
 token = os.getenv("token")
 webhook_url = os.getenv("LOGGING_WEBHOOK_URL")
