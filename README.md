@@ -101,6 +101,7 @@ Open an issue if you find a bug or want to suggest a feature!
 - Ensure you invite the bot with the correct permissions:  
   - `applications.commands`
   - `bot` permissions to read/send messages.
+- Make sure you have messaage Message Content Intent enabled on [DISCORD DEV PORTAL](https://discord.com/developers/docs/intro)
 
 ---
 
