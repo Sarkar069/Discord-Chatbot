@@ -31,7 +31,7 @@ async def on_ready():
 
 # loading cogs
 cog_modules = [
-  "groq" ,"ping","uptime"
+  "groq"
 ]
 for module in cog_modules:
     try:
