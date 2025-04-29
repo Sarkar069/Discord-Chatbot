@@ -97,7 +97,10 @@ class Groq(commands.Cog):
             stream = await self.groq_client.chat.completions.create(
                 model=model,
                 messages=[{"role": "system", "content": self.system_prompt}] + history[-5:] + messages,
-                stream=True
+                stream=True,
+                temperature=0.7,
+                max_tokens=1024,
+                top_p=1
             )
 
             groq_response = ""
