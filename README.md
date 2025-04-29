@@ -70,7 +70,7 @@ python3 main.py
 | ------------------ | ----------------------------------------------------- |
 | `/toggle_channel`  | Sets the channel where the bot will respond.           |
 | `/clear_history`   | Clears the stored conversation history for the session.|
-| `/switch model `   | model a different model to chat with.                  |
+| `/switch model `   | select a different model to chat.                  |
 ---
 
 ## 📋 Requirements
