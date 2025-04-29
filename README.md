@@ -14,9 +14,6 @@ Ideal for Discord servers that want an AI assistant or chat companion!
 ## ✨ Features
 
 - **GROQ API Integration**: Smart, context-aware conversation generation.
-- **Slash Commands**:
-  - `/toggle_channel`: Set where the bot is allowed to respond.
-  - `/clear_history`: Clear the conversation history for fresh sessions.
 - **Channel Restriction**: Only responds in approved channels.
 - **History Management**: Deletes previous conversations when needed.
 - **Simple and Clean Code**: Easy to understand and expand.
@@ -73,7 +70,7 @@ python3 main.py
 | ------------------ | ----------------------------------------------------- |
 | `/toggle_channel`  | Sets the channel where the bot will respond.           |
 | `/clear_history`   | Clears the stored conversation history for the session.|
-
+| `/switch model `   | model a different model to chat with.                  |
 ---
 
 ## 📋 Requirements
@@ -83,16 +80,6 @@ python3 main.py
 - Access to [GROQ API](https://groq.com/)
 
 ---
-
-
-
-## 🤝 Contribution
-
-PRs are welcome! Feel free to fork, tweak, and submit pull requests.  
-Open an issue if you find a bug or want to suggest a feature!
-
----
-
 
 
 ## 📢 Notes
