@@ -14,7 +14,7 @@ Ideal for Discord servers that want an AI assistant or chat companion!
 ## ✨ Features
 
 - **GROQ API Integration**: Smart, context-aware conversation generation.
-- [**Slash Commands**](https://github.com/Sarkar069/Discord-Chatbot#-slash-commands):
+- [**Slash Commands**](#-slash-commands):
 - **Channel Restriction**: Only responds in approved channels.
 - **History Management**: Deletes previous conversations when needed.
 - **Simple and Clean Code**: Easy to understand and expand.
