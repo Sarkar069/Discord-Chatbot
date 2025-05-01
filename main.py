@@ -30,7 +30,7 @@ async def on_ready():
 
 # loading cogs
 cog_modules = [
-  "groq"
+  "groq", "stats"
 ]
 for module in cog_modules:
     try:
