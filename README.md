@@ -22,31 +22,36 @@ Ideal for Discord servers that want an AI assistant or chat companion!
 ---
 
 ## 🛠 Getting Started
-
 ### 1. Clone the repository
-
 ```bash
 git clone https://github.com/Sarkar069/Discord-Chatbot.git
 cd Discord-Chatbot
 ```
 
-### 2. Install dependencies
+### 2. Setup your `.env` file
+Create a `.env` file in the root directory based on `.env_example`.
 
+## 🚀 Run the bot
+### 💻 **Option 1: With Python (Local)**
+Make sure you have **Python 3.8** or **above** installed.  
+Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
-
-> ⚡ Make sure you have Python 3.8 or above.
-
-### 3. Setup your `.env` file
-
-Create a `.env` file in the root directory:
-
-
-### 4. Run the bot
-
+Start the bot:
 ```bash
 python3 main.py
+```
+
+### 🐳 **Option 2: With Docker**
+Start the bot
+```bash
+docker compose up -d
+```
+
+Stop the bot
+```bash
+docker compose down
 ```
 
 ---
