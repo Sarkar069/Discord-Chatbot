@@ -60,10 +60,12 @@ docker compose down
 
 ```
 ├── cogs/
-│   └── groq.py            # Slash commands for channel toggle and history clear 
+│   └── groq.py   # Slash commands for channel toggle and history clear 
+│   └── stats.py  # Slash commands for checking bot's ping and stats
 ├── botlog.py                  # Logging setup
 ├── main.py                    # Main bot file
 ├── requirements.txt           # Dependencies
+├── utils.py                   # dev_gulid_id
 ├── .env                       # Environment variables (not committed)
 └── README.md                  # Project info
 ```
@@ -76,7 +78,7 @@ docker compose down
 | ------------------ | ----------------------------------------------------- |
 | `/toggle_channel`  | Sets the channel where the bot will respond.           |
 | `/clear_history`   | Clears the stored conversation history for the session.|
-| `/switch model `   | select a different model to chat.                  |
+| `/switch model `   | Select a different model to chat.                  |
 ---
 
 ## 📋 Requirements

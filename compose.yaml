@@ -4,4 +4,5 @@ services:
       context: .
       dockerfile: Dockerfile
     restart: unless-stopped
-    env_file: ".env"
+    env_file:
+      - .env  # fixed indentation
