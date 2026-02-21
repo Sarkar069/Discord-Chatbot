@@ -1,43 +1,27 @@
-import disnake
-from disnake.ext import commands
 import os
+
+import disnake
 from dotenv import load_dotenv
+
+from botlogs import setup_logging
+from core.bot import BaseBot
+
 load_dotenv()
-from botlog import setup_logging
 
-token = os.getenv("token")
-webhook_url = os.getenv("LOGGING_WEBHOOK_URL")
+TOKEN = os.getenv("token")
+WEBHOOK_URL = os.getenv("LOGGING_WEBHOOK_URL")
 
-# logging 
-logger = setup_logging(webhook_url)
+logger, log_worker = setup_logging(WEBHOOK_URL)
 
-# Inital setup
 intents = disnake.Intents.default()
 intents.message_content = True
-intents.messages = True 
+intents.messages = True
 
-activity = disnake.CustomActivity(name="Ask me anything...!")
-bot = commands.InteractionBot(intents=intents,activity=activity)
+activity = disnake.CustomActivity(name="searching 💕")
 
+bot = BaseBot(activity=activity, logger=logger, intents=intents)
+bot.log_worker = log_worker  # 🔑 THIS IS REQUIRED
 
-# starting the bot
-@bot.event
-async def on_ready():
-    print(f"Logged in as {bot.user}")
-    logger.info(f"Logged in as {bot.user}")
-   
+bot.load_cogs(["groq", "stats"])
 
-
-# loading cogs
-cog_modules = [
-  "groq", "stats"
-]
-for module in cog_modules:
-    try:
-        bot.load_extension(f"cogs.{module}")
-    except Exception as e:
-        logger.error(f"Error loding cog {module} : {e}")
-        print(f"Error : {e}")
-
-#token 
-bot.run(token) 
+bot.run(TOKEN)
